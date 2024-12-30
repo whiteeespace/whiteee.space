@@ -32,19 +32,16 @@
     />
     <title>whiteee space ©</title>
 
-    <style>
-      body {
-        cursor: url("%PUBLIC_URL%/dot.png") 18 18, auto;
-      }
-      a:hover {
-        cursor: url("%PUBLIC_URL%/dot.png") 18 18, auto;
-      }
-    </style>
+    <script>
+      document.onmousemove = function (e) {
+        document.body.style.setProperty("--x", e.clientX + "px");
+        document.body.style.setProperty("--y", e.clientY + "px");
+      };
+    </script>
   </head>
   <body>
     <noscript
-      >white space whitee space whiteee space ©. a design studio based in
-      montreal.</noscript
+      >white space whitee space whiteee space ©. a design studio based in montreal.</noscript
     >
     <div id="root"></div>
     <!--

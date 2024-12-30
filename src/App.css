@@ -1,3 +1,9 @@
+* {
+  cursor: none;
+  margin: 0;
+  padding: 0;
+}
+
 body,
 html {
   font-family: "Montserrat";
@@ -25,11 +31,28 @@ html {
   background: black;
 }
 
+.container::before {
+  content: "";
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(farthest-side, #fff 95%, transparent 100%) calc(var(--x) - 0.75em)
+    calc(var(--y) - 0.75em) / 1.5em 1.5em fixed no-repeat;
+  mix-blend-mode: difference;
+  pointer-events: none;
+}
+
 .container {
+  position: relative;
   display: flex;
   height: 100%;
   justify-content: center;
   align-items: center;
+  z-index: 1;
+  background-color: #fff;
 
   .textContainer {
     display: flex;
@@ -42,8 +65,8 @@ html {
     text-align: center;
     font-size: 72px;
     font-weight: 700;
-    text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
-      1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
+    text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000,
+      0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
 
     margin: 0;
 
@@ -87,29 +110,8 @@ html {
   }
 }
 
-.dotLogo {
+.logo {
   position: absolute;
   bottom: 28px;
   right: 28px;
-  width: 36px;
-  height: 36px;
-  background-color: white;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  display: flex;
-  font-size: 14px;
-  overflow: hidden;
-
-  justify-content: center;
-  align-items: center;
-}
-
-.dotLogo:hover {
-  background-color: white;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.logoText {
-  padding: 0 30px 0 10px;
-  white-space: nowrap;
 }
