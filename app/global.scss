@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  cursor: none;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  font-family: var(--font-montserrat);
+  font-style: normal;
+  font-weight: normal;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+
+  height: 100dvh;
+  width: 100dvw;
+
+  & > #root {
+    height: 100%;
+  }
+}
+
+::-moz-selection {
+  color: white;
+  background: black;
+}
+
+::selection {
+  color: white;
+  background: black;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

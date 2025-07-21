@@ -1,36 +1,3 @@
-* {
-  cursor: none;
-  margin: 0;
-  padding: 0;
-}
-
-body,
-html {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: normal;
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-
-  height: 100dvh;
-  width: 100dvw;
-
-  & > #root {
-    height: 100%;
-  }
-}
-
-::-moz-selection {
-  color: white;
-  background: black;
-}
-
-::selection {
-  color: white;
-  background: black;
-}
-
 .container::before {
   content: "";
   position: absolute;
@@ -96,6 +63,16 @@ html {
       font-size: 12px;
       margin: 0;
     }
+  }
+
+  .pastWorks {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
   }
 
   .email {

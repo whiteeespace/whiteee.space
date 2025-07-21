@@ -1,3 +1,5 @@
+"use client";
+
 import { useCallback, useEffect, useState } from "react";
 import { useAnimate } from "framer-motion";
 
@@ -20,11 +22,7 @@ const Blob: React.FC<Props> = ({ width, children, className }) => {
       { scale: [1], width: [36, width ?? 180], borderRadius: [50, 20] },
       { ease: "easeInOut", duration: 0.5 }
     );
-    animate(
-      "div",
-      { opacity: [0, 0, 0, 1] },
-      { ease: "easeInOut", duration: 0.5 }
-    );
+    animate("div", { opacity: [0, 0, 0, 1] }, { ease: "easeInOut", duration: 0.5 });
   }, [animate, scope, width]);
 
   const handleHoverEnd = useCallback(async () => {
@@ -33,11 +31,7 @@ const Blob: React.FC<Props> = ({ width, children, className }) => {
       { scale: [1], width: [width ?? 180, 36], borderRadius: [20, 50] },
       { ease: "easeInOut", duration: 0.5 }
     );
-    animate(
-      "div",
-      { opacity: [1, 0, 0, 0] },
-      { ease: "easeInOut", duration: 0.5 }
-    ).then(() => {
+    animate("div", { opacity: [1, 0, 0, 0] }, { ease: "easeInOut", duration: 0.5 }).then(() => {
       setStartRepeatAnimation(true);
     });
   }, [animate, scope, width]);
@@ -61,10 +55,7 @@ const Blob: React.FC<Props> = ({ width, children, className }) => {
       onMouseLeave={handleHoverEnd}
       className={classNames(styles["dot-logo"], className)}
     >
-      <div
-        className={styles["logo-text"]}
-        style={{ opacity: 0, marginRight: 15 }}
-      >
+      <div className={styles["logo-text"]} style={{ opacity: 0, marginRight: 15 }}>
         {children}
       </div>
     </div>
