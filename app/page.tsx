@@ -85,7 +85,7 @@ export default function Home() {
           </Tooltip.Trigger>
           <Tooltip.Positioner>
             <Tooltip.Content className={styles.tooltipContent}>
-              websites shouldn't all look the same. a space for fully custom design + web
+              websites shouldn&apos;t all look the same. a space for fully custom design + web
               development.
             </Tooltip.Content>
           </Tooltip.Positioner>
